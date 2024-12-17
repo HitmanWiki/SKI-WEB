@@ -17,7 +17,8 @@
             contain-intrinsic-size: 3000px 1500px
         }
     </style>
-    <script type="text/javascript" src="https://new-widgets.rubic.exchange/iframe/bundle.new-app.min.js"></script>
+
+
     <script type="text/javascript">
         let jqueryParams = [],
             jQuery = function (r) {
@@ -4763,7 +4764,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
                                                     <div class="et_pb_code_inner">
-                                                        <div id="rubic-widget-root"></div>
+                                                        <style>
+                                                            iframe {
+                                                                border: none;
+                                                                width: 500px;
+                                                                height: 600px;
+                                                            }
+                                                        </style>
+                                                        <iframe
+                                                            src="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x69420db6135a3c921038784832c6606c57ffb6de&chain=base"
+                                                            title="Uniswap Buy/Sell Token Widget">
+                                                        </iframe>
 
                                                     </div>
                                                 </div>
@@ -4773,7 +4784,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
                                                     <div class="et_pb_code_inner">
-                                                        <div id="swap"></div>
+                                                        <!-- <div id="swap"></div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -5134,42 +5145,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
                                                     <div class="et_pb_code_inner">
-                                                        <script defer type="text/javascript">
-                                                            // describe widget configuration and saving to a global variable for future use
-                                                            var configuration = {
-                                                                from: 'ETH',
-                                                                to: '0x69420db6135a3c921038784832c6606c57ffb6de',
-                                                                fromChain: 'BASE',
-                                                                toChain: 'BASE',
-                                                                amount: 1,
-                                                                iframe: 'true',
-                                                                hideSelectionFrom: false,
-                                                                hideSelectionTo: true,
-                                                                hideTokenSwitcher: false,
-                                                                theme: 'dark',
-                                                                injectTokens: {
-                                                                    'base': [
-                                                                        '0x69420db6135a3c921038784832c6606c57ffb6de'
-                                                                    ]
-                                                                },
-                                                                slippagePercent: {
-                                                                    instantTrades: 2,
-                                                                    crossChain: 5
-                                                                },
-                                                                crossChainIntegratorAddress: '',
-                                                                onChainIntegratorAddress: '',
-                                                                whitelistOnChain: [],
-                                                                blacklistOnChain: [],
-                                                                whitelistCrossChain: [],
-                                                                blacklistCrossChain: []
-                                                            }
 
-                                                            // prevent accidental changes to the object, for example, when re-creating a widget for another theme
-                                                            Object.freeze(configuration);
-
-                                                            // create widget
-                                                            rubicWidget.init(configuration);
-                                                        </script>
                                                     </div>
                                                 </div>
                                             </div>
