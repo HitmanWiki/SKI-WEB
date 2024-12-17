@@ -4355,7 +4355,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
                                                             <h4 class="et_pb_module_header"><span>SKI MASK PEPE Contract
                                                                     Address</span></h4>
                                                             <div class="et_pb_blurb_description">
-                                                                <p>0x69420db6135a3c921038784832c6606c57ffb6de</p>
+                                                                <p id="contract-address"
+                                                                    style="display: inline-flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; color: #ffffff; cursor: pointer;">
+                                                                    0x69420db6135a3c921038784832c6606c57ffb6de
+                                                                </p>
+                                                                <!-- Copy Icon -->
+                                                                <button id="copy-button"
+                                                                    style="background-color: transparent; border: none; cursor: pointer; padding: 0;">
+                                                                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/copy.png"
+                                                                        alt="Copy" style="width: 20px; height: 20px;" />
+                                                                </button>
+                                                                <div id="copy-success"
+                                                                    style="color: #ffff; font-size: 0.9rem; display: none; margin-top: 5px;">
+                                                                    Contract Address Copied!
+                                                                </div>
+                                                                <script>
+                                                                    // JavaScript to copy contract address to clipboard
+                                                                    document.getElementById('copy-button').addEventListener('click', function () {
+                                                                        const address = document.getElementById('contract-address').innerText;
+
+                                                                        // Create a temporary input to copy the text
+                                                                        const tempInput = document.createElement('textarea');
+                                                                        tempInput.value = address;
+                                                                        document.body.appendChild(tempInput);
+                                                                        tempInput.select();
+                                                                        document.execCommand('copy');
+                                                                        document.body.removeChild(tempInput);
+
+                                                                        // Show success message
+                                                                        const successMsg = document.getElementById('copy-success');
+                                                                        successMsg.style.display = 'block';
+                                                                        setTimeout(() => successMsg.style.display = 'none', 2000);
+                                                                    });
+                                                                </script>
                                                             </div>
                                                         </div>
                                                     </div>
